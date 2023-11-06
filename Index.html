@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contas Bancárias</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Contas</a>
+            <a href="#">Transações</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+
+   <br> <br>
+   <br> <br>
+    <div class="container">
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <br>
+            <h2>Gerenciador de contas bancárias</h2>
+            <br>
+            <br>
+            <div class="form">
+                <label style="display: block;margin-top: 5px; margin-bottom: 10px;" for="agencia">Agência:</label>
+                <input style="width: 100%; padding: 5px;" type="number" id="agencia">
+                <br> <br>
+                <label style="display: block;margin-top: 5px; margin-bottom: 10px;" for="numero">Número:</label>
+                <input style="width: 100%; padding: 5px;" type="number" id="numero">
+                <br> <br>
+                <label style="display: block;margin-top: 5px; margin-bottom: 10px;" for="tipo">Tipo de Conta:</label>
+                <select id="tipo">
+                    <option value="corrente">Conta Corrente</option>
+                    <option value="poupanca">Conta Poupança</option>
+                    <option value="universitaria">Conta Universitária</option>
+                </select>
+                <br> <br>
+                <label style="display: block;margin-top: 5px; margin-bottom: 10px;" for="saldo">Saldo:</label>
+                <input style="width: 100%; padding: 5px;" type="text" id="saldo">
+                <button style="width: 100%; margin-top: 5px; margin-bottom: 10px; padding: 10px;" onclick="inserirConta()">Depositar</button>
+                <button style="width: 100%; margin-top: 5px; margin-bottom: 10px; padding: 10px;" onclick="sacarValor()">Sacar</button>
+            </div>
+            <div class="actions">
+                <button style="width: 100%; margin-top: 5px; margin-bottom: 10px; padding: 10px;" onclick="visualizarContas()">Visualizar Contas</button>
+                <button style="width: 100%; margin-top: 5px; margin-bottom: 10px; padding: 10px;" onclick="deletarConta()">Deletar Conta</button>
+            </div>
+        </div>
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div id="listaContas" class="lista-contas"></div>
+        </div>
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+        <div>
+            <canvas id="myChart"></canvas>
+          </div>
+          <div>
+            <canvas id="myChart2"></canvas>
+          </div>
+          <div>
+            <canvas id="myChart3"></canvas>
+          </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div>
+            <h3>Sobre</h3>
+            <p>Olá seja bem-vindo ao meu gerenciador de contas bancárias, esse site foi toltamente programado para você que está querendo aprender como funciona uma transação bancária e também pra quem gosta de testar sites feitos por juniors.</p>
+        </div>
+        <div>
+            <h3>Contato</h3>
+            <p>Email: jhones.00000850258@unicap.br</p>
+            <p>Telefone: (81) 9XXXX-XXXX </p>
+        </div>
+        <div>
+            <h3>Redes sociais</h3>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/jhones-bonifacio-da-silva-350817270/" target="_blank">Linkedin</a></li>
+                <li><a href="https://github.com/JhonB-DEVLP" target="_blank">Github</a></li>
+                </ul>
+        </div>
+    </footer>
+
+    <script src="Main.js"></script>
+</body>
+
+</html>
